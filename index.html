@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan | Computer Science Student &amp; Aspiring Software Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Karan - Computer Science Student &amp; Aspiring Software Developer skilled in Java, C, Python, and Object-Oriented Programming. Building practical software projects." />
+  <meta name="keywords" content="Karan, Software Developer, Java, Python, C, Computer Science, Farah, Mathura, Uttar Pradesh, Employee Payroll System, HackerRank" />
+  <meta name="author" content="Karan" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Karan | Computer Science Student &amp; Aspiring Software Developer" />
+  <meta property="og:description" content="Building My Skills, One Project at a Time. Computer Science student passionate about programming and software development." />
+  <meta property="og:image" content="assets/Image.jpeg?v=2" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50' y='68' font-size='55' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>K</text></svg>" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- React 18 & Babel Standalone (Runs out-of-the-box in any browser with zero build configuration) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <!-- Root React Mounting Container -->
+  <div id="root">
+    <!-- Non-JS Fallback for SEO & initial paint -->
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+        <h1>Karan - Computer Science Student &amp; Aspiring Software Developer</h1>
+        <p>Location: Farah, Mathura, Uttar Pradesh, India</p>
+        <p>Email: <a href="mailto:karandhangar026@gmail.com">karandhangar026@gmail.com</a> | Phone: 9690818095</p>
+        <p>Please enable JavaScript to view the full interactive portfolio website.</p>
+      </div>
+    </noscript>
+  </div>
+
+  <!-- React Application Source -->
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    // Confirmed Portfolio Data
+    const portfolioData = {
+      personal: {
+        name: "Karan",
+        role: "Computer Science Student | Aspiring Software Developer",
+        headline: "Building My Skills, One Project at a Time.",
+        description: "I am a Computer Science student passionate about programming, software development, and problem-solving. I work with C, Java, and Python and enjoy developing practical projects while continuously improving my technical skills.",
+        location: "Farah, Mathura, Uttar Pradesh, India",
+        email: "karandhangar026@gmail.com",
+        phone: "9690818095",
+        githubUrl: "https://github.com/k6615",
+        linkedinUrl: "https://www.linkedin.com/in/karan-dhangar-4a07673a5",
+        resumeUrl: "resume.pdf",
+        avatarUrl: "assets/Image.jpeg?v=2",
+        availabilityBadge: "Open to Internships & Entry-Level Roles",
+      },
+      skills: {
+        // ONLY the confirmed three programming languages (no invented proficiency percentages)
+        languages: [
+          {
+            id: "java",
+            name: "Java",
+            category: "Programming Language",
+            description: "Core Java, Object-Oriented Programming, and practical software design patterns.",
+            badge: "Primary Language",
+            icon: "java",
+          },
+          {
+            id: "c",
+            name: "C",
+            category: "Programming Language",
+            description: "Fundamental procedural programming, memory handling, and algorithmic basics.",
+            badge: "Core Foundation",
+            icon: "c",
+          },
+          {
+            id: "python",
+            name: "Python",
+            category: "Programming Language",
+            description: "Scripting, dynamic data manipulation, problem-solving, and clean syntax.",
+            badge: "Versatile",
+            icon: "python",
+          },
+        ],
+        // Relevant core concepts
+        concepts: [
+          {
+            id: "oop",
+            name: "Object-Oriented Programming",
+            category: "Core Concept",
+            description: "Encapsulation, Inheritance, Polymorphism, and Abstraction implemented in real application structures.",
+            badge: "Core Architecture",
+            icon: "oop",
+          },
+          {
+            id: "problem-solving",
+            name: "Problem Solving",
+            category: "Core Concept",
+            description: "Logical analysis, computational thinking, debugging, and building optimized solutions.",
+            badge: "Analytical Skill",
+            icon: "problem-solving",
+          },
+          {
+            id: "dsa",
+            name: "Data Structures and Algorithms",
+            category: "Core Concept",
+            description: "Actively studying arrays, linked lists, searching, sorting, and algorithmic efficiency.",
+            badge: "Currently Learning",
+            isLearning: true,
+            icon: "dsa",
+          },
+        ],
+      },
+      projects: [
+        {
+          id: "employee-payroll-system",
+          title: "Employee Payroll System",
+          technology: "Java",
+          category: "Software Development",
+          description: "An Employee Payroll System developed using Java, demonstrating Object-Oriented Programming concepts and employee payroll management functionality.",
+          githubUrl: "https://github.com/k6615/Employee-Payroll-System-Java",
+          highlights: [
+            "Implements core OOP concepts: encapsulation of employee records, inheritance, and modular methods",
+            "Calculates payroll, bonuses, and deductions with clean business logic",
+            "Structured Java architecture designed for maintainability and scalability",
+          ],
+          tags: ["Java", "OOP", "Payroll Management", "Software Development"],
+        },
+      ],
+      certifications: [
+        {
+          id: "java-cert",
+          title: "Java Certificate",
+          issuer: "HackerRank",
+          isIssuerEditable: false,
+          credentialUrl: "https://www.hackerrank.com/certificates/",
+          imageUrl: "",
+          description: "Verified assessment demonstrating Java programming syntax, OOP logic, and coding problem-solving.",
+          status: "Verified",
+        },
+        {
+          id: "python-cert",
+          title: "Python Certificate",
+          issuer: "HackerRank",
+          isIssuerEditable: false,
+          credentialUrl: "https://www.hackerrank.com/certificates/",
+          imageUrl: "",
+          description: "Verified assessment demonstrating fundamental Python programming skills and data manipulation.",
+          status: "Verified",
+        },
+        {
+          id: "genai-cert",
+          title: "Introduction to Generative AI Studio",
+          issuer: "Google Cloud / Coursera (Click to edit)",
+          isIssuerEditable: true,
+          credentialUrl: "",
+          imageUrl: "",
+          description: "Foundational learning covering Generative AI studio tooling, prompt exploration, and AI workflows.",
+          status: "Editable Credential",
+        },
+      ],
+    };
+
+    // Component: Navbar
+    function Navbar({ personal, activeSection, onNavigate }) {
+      const [isScrolled, setIsScrolled] = useState(false);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+
+      const navItems = [
+        { label: "About", href: "#hero" },
+        { label: "Skills", href: "#skills" },
+        { label: "Projects", href: "#projects" },
+        { label: "Certifications", href: "#certifications" },
+        { label: "Contact", href: "#contact" },
+      ];
+
+      const handleNavClick = (href) => {
+        setMobileMenuOpen(false);
+        if (onNavigate) onNavigate(href);
+      };
+
+      return (
+        <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
+          <div className="container">
+            <nav className="navbar" aria-label="Main Navigation">
+              <a href="#hero" className="brand-logo" onClick={() => handleNavClick("#hero")}>
+                <span>{personal.name}</span>
+                <span className="brand-dot" aria-hidden="true"></span>
+              </a>
+
+              <ul className={`nav-links ${mobileMenuOpen ? "open" : ""}`}>
+                {navItems.map((item) => (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      className={`nav-link ${activeSection === item.href.slice(1) ? "active" : ""}`}
+                      onClick={() => handleNavClick(item.href)}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+                {mobileMenuOpen && (
+                  <li>
+                    <a
+                      href={personal.resumeUrl}
+                      download="Karan_Resume.pdf"
+                      className="btn btn-primary btn-sm"
+                      style={{ width: "100%", marginTop: "0.5rem" }}
+                    >
+                      Download Resume
+                    </a>
+                  </li>
+                )}
+              </ul>
+
+              <div className="header-actions">
+                <a
+                  href={personal.resumeUrl}
+                  download="Karan_Resume.pdf"
+                  className="btn btn-outline btn-sm"
+                  title="Download Karan's Resume"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Resume</span>
+                </a>
+
+                <button
+                  type="button"
+                  className="mobile-toggle"
+                  aria-label="Toggle navigation menu"
+                  aria-expanded={mobileMenuOpen}
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                  {mobileMenuOpen ? (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  ) : (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="3" y1="12" x2="21" y2="12"></line>
+                      <line x1="3" y1="6" x2="21" y2="6"></line>
+                      <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </nav>
+          </div>
+        </header>
+      );
+    }
+
+    // Component: Hero Section
+    function Hero({ personal, hero }) {
+      return (
+        <section id="hero" className="hero-section">
+          <div className="container">
+            <div className="hero-grid">
+              <div className="hero-content">
+                <div className="hero-badge-pill" aria-label="Current status">
+                  <span className="status-dot" aria-hidden="true"></span>
+                  <span>{personal.availabilityBadge}</span>
+                </div>
+
+                <p className="hero-name-intro">Hi, I am</p>
+                <h1 className="hero-title">{personal.name}</h1>
+                <p className="hero-role">{personal.role}</p>
+
+                <blockquote className="hero-headline-quote">
+                  &ldquo;{hero.headline}&rdquo;
+                </blockquote>
+
+                <p className="hero-description">{personal.description}</p>
+
+                {/* Location with map pin icon below description */}
+                <div className="hero-location-bar">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>{personal.location}</span>
+                </div>
+
+                {/* Three required action buttons */}
+                <div className="hero-cta-group">
+                  <a href="#projects" className="btn btn-primary">
+                    <span>View Projects</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19"></line>
+                      <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                  </a>
+
+                  <a
+                    href={personal.resumeUrl}
+                    download="Karan_Resume.pdf"
+                    className="btn btn-secondary"
+                    title="Download Karan's Resume"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download Resume</span>
+                  </a>
+
+                  <a href="#contact" className="btn btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Contact Me</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Profile Image Card */}
+              <div className="hero-visual-card">
+                <div className="hero-floating-pill pill-1">
+                  <span style={{ color: "#2563eb", fontWeight: "bold" }}>&lt;/&gt;</span>
+                  <span>Java &bull; C &bull; Python</span>
+                </div>
+
+                <div className="hero-avatar-frame">
+                  <img
+                    src={personal.avatarUrl}
+                    alt={`${personal.name} - Profile Photo`}
+                    className="hero-avatar-img"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      if (e.currentTarget.parentElement) {
+                        e.currentTarget.parentElement.style.display = "flex";
+                        e.currentTarget.parentElement.style.alignItems = "center";
+                        e.currentTarget.parentElement.style.justifyContent = "center";
+                        e.currentTarget.parentElement.innerHTML = `<div style="font-size: 5rem; font-weight: 800; color: #2563eb;">K</div>`;
+                      }
+                    }}
+                  />
+                  <div className="hero-avatar-badge">
+                    <div className="hero-badge-title">
+                      <span>Aspiring Developer</span>
+                      <span style={{ color: "#16a34a" }}>&bull; Active</span>
+                    </div>
+                    <p className="hero-badge-subtitle">Focus: Practical Development &amp; Problem Solving</p>
+                  </div>
+                </div>
+
+                <div className="hero-floating-pill pill-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <span>Problem Solving</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Component: Skills Section
+    function Skills({ skills }) {
+      const renderIcon = (type) => {
+        switch (type) {
+          case "java":
+            return (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            );
+          case "c":
+            return (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                <line x1="9" y1="20" x2="15" y2="20"></line>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+              </svg>
+            );
+          case "python":
+            return (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 16v1a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1"></path>
+                <path d="M8 8V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-1"></path>
+                <circle cx="9" cy="9" r="1"></circle>
+                <circle cx="15" cy="15" r="1"></circle>
+              </svg>
+            );
+          case "oop":
+            return (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            );
+          case "problem-solving":
+            return (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            );
+          case "dsa":
+          default:
+            return (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="6" y1="3" x2="6" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
+              </svg>
+            );
+        }
+      };
+
+      return (
+        <section id="skills" className="section" style={{ background: "var(--bg-surface)" }}>
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Technical Competency</div>
+              <h2 className="section-title">Technical Skills</h2>
+              <p className="section-subtitle">
+                Core programming languages and fundamental computer science concepts. No invented percentages.
+              </p>
+            </div>
+
+            <div className="skills-container">
+              {/* Programming Languages: ONLY Java, C, Python */}
+              <div className="skills-subgroup">
+                <h3 className="skills-group-title">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Programming Languages</span>
+                </h3>
+
+                <div className="skills-grid">
+                  {skills.languages.map((lang) => (
+                    <div key={lang.id} className="skill-card">
+                      <div className="skill-card-header">
+                        <div className="skill-icon-wrapper" aria-hidden="true">
+                          {renderIcon(lang.icon)}
+                        </div>
+                        {lang.badge && <span className="skill-tag-badge">{lang.badge}</span>}
+                      </div>
+                      <h4 className="skill-name">{lang.name}</h4>
+                      <div className="skill-category">{lang.category}</div>
+                      <p className="skill-desc">{lang.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Core Concepts */}
+              <div className="skills-subgroup">
+                <h3 className="skills-group-title">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                  <span>Core Concepts &amp; Fundamentals</span>
+                </h3>
+
+                <div className="skills-grid">
+                  {skills.concepts.map((concept) => (
+                    <div key={concept.id} className="skill-card">
+                      <div className="skill-card-header">
+                        <div className="skill-icon-wrapper" aria-hidden="true">
+                          {renderIcon(concept.icon)}
+                        </div>
+                        {concept.badge && (
+                          <span className={`skill-tag-badge ${concept.isLearning ? "badge-learning" : ""}`}>
+                            {concept.badge}
+                          </span>
+                        )}
+                      </div>
+                      <h4 className="skill-name">{concept.name}</h4>
+                      <div className="skill-category">{concept.category}</div>
+                      <p className="skill-desc">{concept.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Component: Project Section
+    function Projects({ projects }) {
+      return (
+        <section id="projects" className="section">
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Practical Application</div>
+              <h2 className="section-title">My Project</h2>
+              <p className="section-subtitle">
+                Practical software development projects demonstrating core programming principles.
+              </p>
+            </div>
+
+            <div className="projects-wrapper">
+              {projects.map((project) => (
+                <article key={project.id} className="project-featured-card">
+                  <div className="project-card-top">
+                    <div className="project-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <span>Featured Project</span>
+                    </div>
+                    <div className="project-tech-pill">{project.technology}</div>
+                  </div>
+
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+
+                  {project.highlights && (
+                    <div className="project-highlights-box">
+                      <div className="highlights-title">Key Highlights &amp; OOP Concepts:</div>
+                      <ul className="highlights-list">
+                        {project.highlights.map((item, idx) => (
+                          <li key={idx}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="project-tags-row">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="project-tag">#{tag}</span>
+                    ))}
+                  </div>
+
+                  <div className="project-footer-actions">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                      title="View repository on GitHub (opens in new tab)"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                      </svg>
+                      <span>View Repository on GitHub</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Component: Certifications Section (with interactive upload, credential verification URL, and editable issuer)
+    function Certifications({ initialCertifications, onShowToast }) {
+      const [certs, setCerts] = useState(() => {
+        try {
+          const saved = localStorage.getItem("karan_portfolio_certs");
+          if (saved) return JSON.parse(saved);
+        } catch (e) {}
+        return initialCertifications;
+      });
+
+      const [activeCertForEdit, setActiveCertForEdit] = useState(null);
+      const [activeCertForPreview, setActiveCertForPreview] = useState(null);
+
+      const updateCert = (id, fields) => {
+        const updated = certs.map((c) => (c.id === id ? { ...c, ...fields } : c));
+        setCerts(updated);
+        try {
+          localStorage.setItem("karan_portfolio_certs", JSON.stringify(updated));
+        } catch (e) {}
+      };
+
+      const handleImageUpload = (certId, e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = () => {
+          updateCert(certId, { imageUrl: reader.result });
+          if (onShowToast) onShowToast("Certificate image uploaded successfully!");
+        };
+        reader.readAsDataURL(file);
+      };
+
+      return (
+        <section id="certifications" className="section" style={{ background: "var(--bg-surface)" }}>
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Verified Credentials</div>
+              <h2 className="section-title">Certifications</h2>
+              <p className="section-subtitle">
+                Professional certifications and skill assessments. Click Edit to customize URLs or upload certificates.
+              </p>
+            </div>
+
+            <div className="certs-grid">
+              {certs.map((cert) => (
+                <div key={cert.id} className="cert-card">
+                  <div className="cert-header">
+                    <div className="cert-icon-box" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                      </svg>
+                    </div>
+                    <span className={`cert-status-badge ${cert.status === "Verified" ? "verified" : ""}`}>
+                      {cert.status || "Assessment"}
+                    </span>
+                  </div>
+
+                  <h3 className="cert-title">{cert.title}</h3>
+
+                  <div className="cert-issuer-row">
+                    <span className="cert-issuer">{cert.issuer || "Issuing Organization"}</span>
+                    {cert.isIssuerEditable && (
+                      <button
+                        type="button"
+                        className="cert-issuer-editable-btn"
+                        onClick={() => setActiveCertForEdit(cert)}
+                        title="Click to edit issuing organization"
+                      >
+                        (Edit Organization)
+                      </button>
+                    )}
+                  </div>
+
+                  <p className="cert-description">{cert.description}</p>
+
+                  {/* Certificate Image or Upload Box */}
+                  <div className="cert-preview-box">
+                    {cert.imageUrl ? (
+                      <img
+                        src={cert.imageUrl}
+                        alt={`${cert.title} Preview`}
+                        className="cert-preview-img"
+                        onClick={() => setActiveCertForPreview(cert)}
+                        title="Click to expand certificate"
+                      />
+                    ) : (
+                      <div className="cert-doc-preview" onClick={() => setActiveCertForEdit(cert)} style={{ cursor: "pointer" }} title="Click to view details">
+                        <div className="cert-doc-header">
+                          <svg className="cert-doc-seal" viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                          </svg>
+                          <span>Official Certificate</span>
+                        </div>
+                        <div className="cert-doc-name">Karan</div>
+                        <div className="cert-doc-title">{cert.title}</div>
+                        <div className="cert-doc-org">{cert.issuer}</div>
+                        <div className="cert-doc-footer">Click &apos;Upload Image&apos; to attach document</div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Actions: Upload Image & Verify URL */}
+                  <div className="cert-actions-row">
+                    <div className="cert-action-btn-group">
+                      <label className="cert-upload-btn-label" style={{ flex: 1, justifyContent: "center" }}>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                          <polyline points="17 8 12 3 7 8"></polyline>
+                          <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span>{cert.imageUrl ? "Change Image" : "Upload Image"}</span>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          style={{ display: "none" }}
+                          onChange={(e) => handleImageUpload(cert.id, e)}
+                        />
+                      </label>
+
+                      <button
+                        type="button"
+                        className="btn btn-secondary btn-sm"
+                        onClick={() => setActiveCertForEdit(cert)}
+                        title="Edit credentials and link"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M12 20h9"></path>
+                          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                        <span>Edit</span>
+                      </button>
+                    </div>
+
+                    {cert.credentialUrl ? (
+                      <a
+                        href={cert.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm"
+                        style={{ width: "100%" }}
+                      >
+                        <span>Verify Credential</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    ) : (
+                      <button
+                        type="button"
+                        className="btn btn-outline btn-sm"
+                        style={{ width: "100%" }}
+                        onClick={() => setActiveCertForEdit(cert)}
+                      >
+                        <span>+ Add Verification URL</span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Modal: Edit Certificate Details */}
+            {activeCertForEdit && (
+              <div className="modal-backdrop" onClick={() => setActiveCertForEdit(null)}>
+                <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+                  <div className="modal-header">
+                    <h3 className="modal-title">Edit Certificate Details</h3>
+                    <button
+                      type="button"
+                      className="modal-close-btn"
+                      onClick={() => setActiveCertForEdit(null)}
+                    >
+                      &times;
+                    </button>
+                  </div>
+
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      setActiveCertForEdit(null);
+                      if (onShowToast) onShowToast("Certificate details saved!");
+                    }}
+                  >
+                    <div className="form-group">
+                      <label className="form-label">Certificate Title</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        value={activeCertForEdit.title}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setActiveCertForEdit({ ...activeCertForEdit, title: val });
+                          updateCert(activeCertForEdit.id, { title: val });
+                        }}
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">
+                        Issuing Organization
+                        {activeCertForEdit.isIssuerEditable && (
+                          <span style={{ fontSize: "0.8rem", color: "#2563eb", marginLeft: "0.5rem" }}>
+                            (Editable as requested)
+                          </span>
+                        )}
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        value={activeCertForEdit.issuer}
+                        placeholder="e.g. Google Cloud, Coursera, HackerRank"
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setActiveCertForEdit({ ...activeCertForEdit, issuer: val });
+                          updateCert(activeCertForEdit.id, { issuer: val });
+                        }}
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">Credential Verification URL</label>
+                      <input
+                        type="url"
+                        className="form-control"
+                        value={activeCertForEdit.credentialUrl || ""}
+                        placeholder="https://www.hackerrank.com/certificates/..."
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setActiveCertForEdit({ ...activeCertForEdit, credentialUrl: val });
+                          updateCert(activeCertForEdit.id, { credentialUrl: val });
+                        }}
+                      />
+                      <small style={{ color: "var(--text-muted)", display: "block", marginTop: "0.3rem" }}>
+                        Paste your direct verification link or credential ID page.
+                      </small>
+                    </div>
+
+                    <div className="modal-actions">
+                      <button
+                        type="button"
+                        className="btn btn-secondary"
+                        onClick={() => setActiveCertForEdit(null)}
+                      >
+                        Cancel
+                      </button>
+                      <button type="submit" className="btn btn-primary">
+                        Save Changes
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            )}
+
+            {/* Modal: Full-screen Preview */}
+            {activeCertForPreview && (
+              <div className="modal-backdrop" onClick={() => setActiveCertForPreview(null)}>
+                <div className="modal-container" style={{ maxWidth: "760px" }} onClick={(e) => e.stopPropagation()}>
+                  <div className="modal-header">
+                    <h3 className="modal-title">{activeCertForPreview.title}</h3>
+                    <button
+                      type="button"
+                      className="modal-close-btn"
+                      onClick={() => setActiveCertForPreview(null)}
+                    >
+                      &times;
+                    </button>
+                  </div>
+                  <div style={{ textAlign: "center", padding: "1rem 0" }}>
+                    <img
+                      src={activeCertForPreview.imageUrl}
+                      alt={activeCertForPreview.title}
+                      style={{ width: "100%", maxHeight: "500px", objectFit: "contain", borderRadius: "8px" }}
+                    />
+                  </div>
+                  <div className="modal-actions">
+                    {activeCertForPreview.credentialUrl && (
+                      <a
+                        href={activeCertForPreview.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm"
+                      >
+                        Open Verification Page
+                      </a>
+                    )}
+                    <button
+                      type="button"
+                      className="btn btn-secondary btn-sm"
+                      onClick={() => setActiveCertForPreview(null)}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    }
+
+    // Component: Contact Section (with clickable mailto, tel, location, github, and editable linkedin)
+    function Contact({ personal, onShowToast }) {
+      const [linkedinUrl, setLinkedinUrl] = useState(() => {
+        try {
+          const saved = localStorage.getItem("karan_portfolio_linkedin");
+          if (saved) return saved;
+        } catch (e) {}
+        return personal.linkedinUrl;
+      });
+
+      const [isEditingLinkedIn, setIsEditingLinkedIn] = useState(false);
+      const [tempLinkedIn, setTempLinkedIn] = useState(linkedinUrl);
+
+      const [formState, setFormState] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      const handleCopy = (text, label) => {
+        navigator.clipboard.writeText(text);
+        if (onShowToast) onShowToast(`${label} copied to clipboard!`);
+      };
+
+      const saveLinkedIn = (e) => {
+        e.preventDefault();
+        setLinkedinUrl(tempLinkedIn);
+        try {
+          localStorage.setItem("karan_portfolio_linkedin", tempLinkedIn);
+        } catch (e) {}
+        setIsEditingLinkedIn(false);
+        if (onShowToast) onShowToast("LinkedIn URL updated!");
+      };
+
+      const handleFormSubmit = (e) => {
+        e.preventDefault();
+        const subject = encodeURIComponent(formState.subject || `Portfolio Contact from ${formState.name}`);
+        const body = encodeURIComponent(
+          `Hi Karan,\n\n${formState.message}\n\nFrom: ${formState.name} (${formState.email})`
+        );
+        window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`;
+        if (onShowToast) onShowToast("Opening email application...");
+      };
+
+      return (
+        <section id="contact" className="section">
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Get In Touch</div>
+              <h2 className="section-title">Contact Me</h2>
+              <p className="section-subtitle">
+                I am actively seeking internship and entry-level software developer opportunities. Let&apos;s connect!
+              </p>
+            </div>
+
+            <div className="contact-grid">
+              {/* Left Column: Direct Contact Info Cards */}
+              <div className="contact-info-list">
+                {/* Email (mailto clickable) */}
+                <div className="contact-item-card">
+                  <div className="contact-item-left">
+                    <div className="contact-item-icon" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="contact-item-label">Email Address</div>
+                      <a href={`mailto:${personal.email}`} className="contact-item-value" title="Send email">
+                        {personal.email}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="contact-item-action">
+                    <button
+                      type="button"
+                      className="btn btn-secondary btn-sm"
+                      onClick={() => handleCopy(personal.email, "Email")}
+                      title="Copy email to clipboard"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Phone (tel clickable) */}
+                <div className="contact-item-card">
+                  <div className="contact-item-left">
+                    <div className="contact-item-icon" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="contact-item-label">Phone Number</div>
+                      <a href={`tel:${personal.phone}`} className="contact-item-value" title="Call number">
+                        +91 {personal.phone}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="contact-item-action">
+                    <a href={`tel:${personal.phone}`} className="btn btn-secondary btn-sm" title="Call number">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="23 7 23 1 17 1"></polyline>
+                        <line x1="16" y1="8" x2="23" y2="1"></line>
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                      <span>Call</span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Location Card */}
+                <div className="contact-item-card">
+                  <div className="contact-item-left">
+                    <div className="contact-item-icon" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="contact-item-label">Location</div>
+                      <div className="contact-item-value">{personal.location}</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Profiles: GitHub & LinkedIn (Editable) */}
+                <div className="social-links-box">
+                  <div className="social-links-title">Online Profiles</div>
+                  <div className="social-buttons-grid">
+                    <a
+                      href={personal.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-btn"
+                      title="View GitHub (opens in new tab)"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+
+                    <a
+                      href={linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-btn"
+                      title="View LinkedIn (opens in new tab)"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+
+                  <div style={{ textAlign: "right" }}>
+                    <button
+                      type="button"
+                      className="linkedin-edit-trigger"
+                      onClick={() => {
+                        setTempLinkedIn(linkedinUrl);
+                        setIsEditingLinkedIn(true);
+                      }}
+                    >
+                      ✏️ Edit LinkedIn Profile URL
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Quick Contact Form */}
+              <div className="contact-form-card">
+                <div className="contact-form-header">
+                  <h3 className="contact-form-title">Send a Quick Message</h3>
+                  <p className="contact-form-subtitle">
+                    Have an internship opportunity or inquiry? Send a direct email note below.
+                  </p>
+                </div>
+
+                <form onSubmit={handleFormSubmit}>
+                  <div className="form-group">
+                    <label className="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Hiring Manager / Recruiter"
+                      className="form-control"
+                      value={formState.name}
+                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Your Email</label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="recruiter@company.com"
+                      className="form-control"
+                      value={formState.email}
+                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Subject</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Software Developer Internship / Interview"
+                      className="form-control"
+                      value={formState.subject}
+                      onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Message</label>
+                    <textarea
+                      required
+                      rows="4"
+                      placeholder="Hello Karan, we came across your portfolio..."
+                      className="form-control"
+                      value={formState.message}
+                      onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="btn btn-primary" style={{ width: "100%" }}>
+                    <span>Send Message via Email</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            {/* Modal: Edit LinkedIn Profile URL */}
+            {isEditingLinkedIn && (
+              <div className="modal-backdrop" onClick={() => setIsEditingLinkedIn(false)}>
+                <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+                  <div className="modal-header">
+                    <h3 className="modal-title">Edit LinkedIn Profile URL</h3>
+                    <button
+                      type="button"
+                      className="modal-close-btn"
+                      onClick={() => setIsEditingLinkedIn(false)}
+                    >
+                      &times;
+                    </button>
+                  </div>
+
+                  <form onSubmit={saveLinkedIn}>
+                    <div className="form-group">
+                      <label className="form-label">LinkedIn Profile URL</label>
+                      <input
+                        type="url"
+                        required
+                        className="form-control"
+                        placeholder="https://www.linkedin.com/in/your-profile"
+                        value={tempLinkedIn}
+                        onChange={(e) => setTempLinkedIn(e.target.value)}
+                      />
+                      <small style={{ color: "var(--text-muted)", display: "block", marginTop: "0.3rem" }}>
+                        Paste your LinkedIn profile URL. It will update the link on the portfolio.
+                      </small>
+                    </div>
+
+                    <div className="modal-actions">
+                      <button
+                        type="button"
+                        className="btn btn-secondary"
+                        onClick={() => setIsEditingLinkedIn(false)}
+                      >
+                        Cancel
+                      </button>
+                      <button type="submit" className="btn btn-primary">
+                        Save URL
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    }
+
+    // Component: Footer
+    function Footer({ personal }) {
+      const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      return (
+        <footer className="site-footer">
+          <div className="container">
+            <div className="footer-top">
+              <div className="footer-brand">
+                <a href="#hero" className="brand-logo" onClick={scrollToTop}>
+                  <span>{personal.name}</span>
+                  <span className="brand-dot" aria-hidden="true"></span>
+                </a>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.9375rem" }}>
+                  {personal.role}
+                </p>
+              </div>
+
+              <ul className="footer-links">
+                <li><a href="#hero">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+
+              <div>
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-sm"
+                  onClick={scrollToTop}
+                  title="Scroll back to top"
+                >
+                  <span>Back to Top</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div className="footer-bottom">
+              <p>&copy; {new Date().getFullYear()} {personal.name}. All rights reserved.</p>
+              <p style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>{personal.location}</span>
+              </p>
+            </div>
+          </div>
+        </footer>
+      );
+    }
+
+    // Main App Component
+    function App() {
+      const [activeSection, setActiveSection] = useState("hero");
+      const [toastMessage, setToastMessage] = useState(null);
+
+      const showToast = (message) => {
+        setToastMessage(message);
+        setTimeout(() => {
+          setToastMessage(null);
+        }, 3200);
+      };
+
+      useEffect(() => {
+        const handleScroll = () => {
+          const sections = ["hero", "skills", "projects", "certifications", "contact"];
+          const scrollPos = window.scrollY + 220;
+
+          for (const sectionId of sections) {
+            const el = document.getElementById(sectionId);
+            if (el) {
+              const top = el.offsetTop;
+              const height = el.offsetHeight;
+              if (scrollPos >= top && scrollPos < top + height) {
+                setActiveSection(sectionId);
+                break;
+              }
+            }
+          }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+
+      return (
+        <div className="portfolio-app">
+          <Navbar
+            personal={portfolioData.personal}
+            activeSection={activeSection}
+            onNavigate={(href) => {
+              const id = href.replace("#", "");
+              const el = document.getElementById(id);
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          />
+
+          <main>
+            <Hero personal={portfolioData.personal} hero={portfolioData.personal} />
+            <Skills skills={portfolioData.skills} />
+            <Projects projects={portfolioData.projects} />
+            <Certifications initialCertifications={portfolioData.certifications} onShowToast={showToast} />
+            <Contact personal={portfolioData.personal} onShowToast={showToast} />
+          </main>
+
+          <Footer personal={portfolioData.personal} />
+
+          {toastMessage && (
+            <div className="toast-notice" role="alert">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>{toastMessage}</span>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    // Mount to root
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+</html>
